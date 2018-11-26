@@ -1,3 +1,3 @@
 # Giới thiệu
 
-code by tuananh && khacuong
+code by tuananh 
