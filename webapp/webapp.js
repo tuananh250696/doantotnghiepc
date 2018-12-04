@@ -18,10 +18,7 @@ angular.module('DATNDPU', [
 	////Khu 1 -- Khu cài đặt tham số	
 	////Khu 2 -- Cài đặt các sự kiện khi tương tác với người dùng
 	//các sự kiện ng-click, nhấn nút
-	$scope.updateSensor  = function() {
-		mySocket.emit("RAIN")
-	}
-		
+
 	 $scope.upt5  = function(){
 	var ip = document.getElementById('ip').value;
 		mySocket.emit("LED1ON"+ip)
@@ -56,12 +53,6 @@ angular.module('DATNDPU', [
 		mySocket.emit("LED4OFF"+ip)
 	}
 	
-	//khi nhận được lệnh Button
-	mySocket.on('BUTTON', function(json) {
-		//Nhận được thì in ra thôi hihi.
-		console.log("recv BUTTON", json)
-		$scope.buttons = json.data
-	})
 
 	
 
